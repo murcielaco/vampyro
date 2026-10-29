@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>VAMPYRO [2190]</title>
+<meta name="description" content="VAMPYRO [2190] — an interactive showroom on Mars. Free download for Windows.">
+<meta property="og:title" content="VAMPYRO [2190]">
+<meta property="og:description" content="An interactive showroom on Mars. Free download for Windows.">
+<meta property="og:image" content="https://vampyro.murcielaco.com/assets/shots/01.jpg">
+<link rel="icon" type="image/png" sizes="64x64" href="/assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/assets/icon-512.png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="preload" href="/assets/metalbat.ttf" as="font" type="font/ttf" crossorigin>
+<link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+<header>
+  <a href="/"><img class="mark" src="/assets/logo.png" alt="VAMPYRO"></a>
+  <nav><a href="#about">[ About ]</a><a href="#gallery">[ Gallery ]</a><a href="#download">[ Download ]</a><a href="/store/">[ Store ]</a></nav>
+</header>
+
+<main>
+<div class="hero">
+  <div class="bg"></div><div class="dim"></div>
+  <div class="cross">
+    <div class="tag">VAMPYRO [2190] // Showroom // Mars</div>
+    <img class="logo" src="/assets/logo.png" alt="VAMPYRO">
+    <a class="btn top" href="#about">[ Explore ]</a>
+    <a class="btn primary bottom" href="#download">[ Download ]</a>
+    <a class="btn left" href="#controls">[ Controls ]</a>
+    <a class="btn right" href="/store/">[ Store ]</a>
+  </div>
+  <div class="scroll">Scroll</div>
+</div>
+
+<section id="about">
+  <h2>[ Showroom ]</h2>
+  <div class="grid">
+    <img class="shot" src="/assets/shots/02.jpg" alt="VAMPYRO [2190] showroom" loading="lazy">
+    <p class="lead">Walk the VAMPYRO dome on Mars in third or first person. Equip the visor, change your outfit, inspect every sneaker up close and buy straight from the game.</p>
+  </div>
+</section>
+
+<section id="gallery" class="gallery">
+  <h2>[ Gallery ]</h2>
+  <div class="g" id="g"></div>
+</section>
+
+<section id="controls">
+  <h2>[ Controls ]</h2>
+  <div class="controls">
+    <div>
+      <h3>Keyboard + mouse</h3>
+      [ WASD ] <span>Move</span><br>[ Shift ] <span>Sprint</span>  [ Ctrl ] <span>Walk / Run</span><br>[ Space ] <span>Jump</span>  [ C ] <span>Crouch</span><br>[ Wheel ] <span>Camera distance</span><br>[ V / MMB ] <span>Visor</span>  [ RMB ] <span>Zoom</span><br>[ E ] <span>Menu</span>  [ F ] <span>Interact</span>  [ Esc ] <span>Pause</span>
+    </div>
+    <div>
+      <h3>Gamepad</h3>
+      [ L ] <span>Move</span>  [ R ] <span>Look</span><br>[ LB ] <span>Sprint</span>  [ RB ] <span>Walk / Run</span><br>[ A ] <span>Jump</span>  [ B ] <span>Crouch</span><br>[ D-Pad ] <span>Camera distance</span><br>[ R3 ] <span>Visor</span>  [ LT ] <span>Zoom</span><br>[ View ] <span>Menu</span>  [ X ] <span>Interact</span>  [ Start ] <span>Pause</span>
+    </div>
+  </div>
+</section>
+
+<section id="download" class="dl">
+  <h2>[ Download ]</h2>
+  <a class="btn primary" href="/download/VAMPYRO_2190.exe" download="VAMPYRO [2190].exe">[ Download for Windows ]</a>
+  <p class="hint" style="margin-top:22px">VAMPYRO [2190] installer · Windows 10 / 11 (64-bit) · installs everything the game needs automatically, at maximum quality · approx. 6 GB</p>
+  <p class="note">If your browser or Windows SmartScreen shows a warning, choose “Keep” and then “More info” → “Run anyway”.</p>
+  <div class="req" style="margin-top:46px;text-align:left">
+    <div><b>System</b>Windows 10 / 11 64-bit<br>DirectX 12</div>
+    <div><b>Graphics</b>Recommended: RTX 3070 / RX 6800 or better<br>Minimum: GPU with 8 GB VRAM</div>
+    <div><b>Hardware</b>16 GB RAM · 6-core CPU<br>15 GB free disk space</div>
+  </div>
+</section>
+</main>
+
+<div class="lb" id="lb"><img alt=""><div class="x">[ Esc ] Close</div></div>
+
+<footer>VAMPYRO BY MURCIELACO</footer>
+<script>
+(function(){
+  var N=6,g=document.getElementById('g'),lb=document.getElementById('lb'),li=lb.querySelector('img');
+  for(var i=1;i<=N;i++){
+    var s='/assets/shots/0'+i+'.jpg',a=document.createElement('a');
+    a.href=s;if(i===1||i===N)a.className='wide';
+    a.innerHTML='<img src="'+s+'" alt="VAMPYRO [2190] screenshot '+i+'" loading="lazy" decoding="async">';
+    a.onclick=function(e){e.preventDefault();li.src=this.href;lb.classList.add('on')};
+    g.appendChild(a);
+  }
+  lb.onclick=function(){lb.classList.remove('on')};
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')lb.classList.remove('on')});
+})();
+</script>
+</body>
+</html>
